@@ -1,12 +1,14 @@
 const express = require('express')
 const mysql = require('mysql')
 const dotenv = require('dotenv')
+const cors = require('cors')
 dotenv.config({ path: './.env' })
 
 const app = express()
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+app.use(cors())
 
 const db = mysql.createConnection({
   host: process.env.host,
