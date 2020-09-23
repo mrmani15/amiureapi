@@ -27,19 +27,19 @@ function ReadModal({ uploadModal, closeModal }) {
 	};
 	const handleSubmit = e => {
 		e.preventDefault();
-		const url = 'http://localhost:5000/upload';
+		const url = '/upload';
 		const token = JSON.parse(localStorage.getItem('token'));
 		const config = {
 			headers: {
 				'auth-token': token,
 			},
-    };
-    const data = {
-      id: parseInt(localStorage.getItem('id')),
-      name: localStorage.getItem('name'),
-      title: title,
-      blog: blog
-    }
+		};
+		const data = {
+			id: parseInt(localStorage.getItem('id')),
+			name: localStorage.getItem('name'),
+			title: title,
+			blog: blog,
+		};
 		axios
 			.post(url, data, config)
 			.then(res => console.log(res))

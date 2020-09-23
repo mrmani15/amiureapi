@@ -8,7 +8,7 @@ function Dashboard() {
 	const [uploadModal, setUploadModal] = useState(false);
 
 	useEffect(() => {
-		const url = 'http://localhost:5000/dashboard';
+		const url = '/dashboard';
 		const token = JSON.parse(localStorage.getItem('token'));
 		const config = {
 			headers: {
@@ -37,11 +37,9 @@ function Dashboard() {
 
 	const closeModal = () => {
 		setUploadModal(false);
-  };
-  
-  const readBlog = (e) => {
-    
-  }
+	};
+
+	const readBlog = e => {};
 	return (
 		<div className='container'>
 			<div className='card mt-3'>

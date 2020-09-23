@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios'
-import {Link} from 'react-router-dom'
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Register() {
 	const [name, setName] = useState('');
@@ -24,7 +24,7 @@ function Register() {
 			email,
 			password,
 		};
-		const url = 'http://localhost:5000/register';
+		const url = '/register';
 		axios
 			.post(url, data)
 			.then(res => {
@@ -81,7 +81,9 @@ function Register() {
 							<button className='btn btn-primary' type='submit'>
 								Submit
 							</button>
-							<Link to='/login' className='ml-5'>Go to Login</Link>
+							<Link to='/login' className='ml-5'>
+								Go to Login
+							</Link>
 						</div>
 					</form>
 				</div>

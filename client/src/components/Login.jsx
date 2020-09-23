@@ -20,7 +20,7 @@ function Login(props) {
 			email,
 			password,
 		};
-		const url = 'http://localhost:5000/login';
+		const url = '/login';
 		axios
 			.post(url, data)
 			.then(res => {
