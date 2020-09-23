@@ -8,11 +8,11 @@ const db = mysql.createConnection({
 })
 
 exports.dashboard = (req, res) => {
-  db.query('SELECT * FROM blog', (error, response) => {
+  db.query('SELECT * FROM blog', (error, results) => {
     if (error) {
       console.log(error)
     } else {
-      return res.status(200).json({ response })
+      return res.status(200).json({ results })
     }
   })
 }

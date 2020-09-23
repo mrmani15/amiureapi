@@ -25,13 +25,12 @@ db.connect((err) => {
     console.log('mysql connected')
   }
 })
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'))
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  })
-}
 
 app.use('/', require('./routes/auth'))
+
+app.use(express.static('client/build'))
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+})
 
 app.listen(5000, () => console.log('server started'))

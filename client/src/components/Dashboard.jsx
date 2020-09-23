@@ -18,7 +18,7 @@ function Dashboard() {
 		axios
 			.get(url, config)
 			.then(res => {
-				setData(res.data.response.reverse());
+				setData(res.data.results);
 			})
 			.catch(err => console.log(err));
 	}, [uploadModal]);
