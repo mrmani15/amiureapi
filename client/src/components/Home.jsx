@@ -6,7 +6,7 @@ function Home() {
 			<div className='jumbotron mt-4'>
 				<h1 className='display-4'>Hello, world!</h1>
 				<p className='lead'>
-					This is NODE MYSQL app with authentication
+					This is NODE MYSQL app for amiure
 				</p>
 				<hr className='my-4' />
 				<p>I am deploying it on aws</p>
